@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "hisLife": "His Life",
+    "finalJourney": "Final Journey",
+    "giftOfLife": "Gift of Life",
+    "recognition": "Recognition",
+    "memories": "Memories"
+  },
+  "hero": {
+    "kicker": "A life remembered",
+    "name": "Kanagala Balarama Krishna",
+    "birthDate": "24 December 1960",
+    "deathDatePlaceholder": "His story continues",
+    "tagline": "A life of truth, family, hard work, and human relationships.",
+    "scrollCue": "Explore his story"
+  },
+  "welcome": {
+    "kicker": "Welcome from the family",
+    "title": "A Life Remembered",
+    "content": "[FAMILY WELCOME MESSAGE TO BE PROVIDED]",
+    "purpose": "This digital space preserves his memories, values, photographs, life story, and legacy for family, friends, and future generations."
+  },
+  "whoWasHe": {
+    "kicker": "Who was he?",
+    "title": "A Life of Purpose",
+    "content": "Kanagala Balarama Krishna was a loving husband, father, son, brother, friend, and a familiar presence to many people around him."
+  },
+  "biography": {
+    "kicker": "Biography",
+    "title": "His Life Story",
+    "chapters": {
+      "01": {
+        "number": "01",
+        "title": "His Early Life",
+        "year": "1960",
+        "content": "Kanagala Balarama Krishna was born on 24 December 1960 in Bhattiprolu, Guntur District, into a middle-class family. He was the youngest child of Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. He spent his childhood in Bhattiprolu and completed his primary and secondary education at Tamanna Mallikarjuna Rao High School, Bhattiprolu, up to the 10th class. Alongside his academics, he was also an NCC cadet, an experience that introduced him to discipline, responsibility and a sense of service from an early age. He completed his matriculation around 1979."
+      },
+      "02": {
+        "number": "02",
+        "title": "A Dream of Serving the Nation",
+        "year": "circa 1980",
+        "content": "Like many young men of his generation, Balarama Krishna carried a dream of serving the country by joining the Indian Army. He made an attempt to pursue that dream, but fate had other plans. A small fracture prevented him from fulfilling the physical requirements and brought an unexpected end to his aspirations of joining the Army. Although that particular dream could not become a reality, the qualities behind it—his discipline, determination and willingness to serve—remained a part of the person he became. He then turned his attention toward learning a practical skill that would shape the rest of his working life."
+      },
+      "03": {
+        "number": "03",
+        "title": "Finding His Path",
+        "year": "1980s",
+        "content": "After completing his schooling, Balarama Krishna began learning electrical work under the guidance of his elder brother. What began as learning a trade gradually became his profession and his means of supporting his family. He went on to work as a private electrician, dedicating decades of his life to his profession. Through his skill, reliability and hard work, he became familiar to many families in and around Bhattiprolu. His profession connected him with people from different walks of life and became one of the ways through which he built lasting relationships within the community."
+      },
+      "04": {
+        "number": "04",
+        "title": "Family",
+        "year": "7 February 1999",
+        "content": "On 7 February 1999, Balarama Krishna married Smt. Kanagala Krishna Durga Suneetha. Together, they built their family and were blessed with two sons. As a husband and father, he carried the responsibilities of his family with dedication. He was the family's primary breadwinner and worked consistently to provide for and support those he loved. His work was not simply a profession—it was one of the ways through which he expressed his responsibility toward his family."
+      },
+      "05": {
+        "number": "05",
+        "title": "A Man Known Through Relationships",
+        "year": "",
+        "content": "Beyond his profession and responsibilities as a family man, Balarama Krishna was known for something even more meaningful—the relationships he built with people. He was known as a truthful and straightforward person, and the people of his village developed a deep affection and respect for him. Interestingly, many people in the village did not address him by his name at all. Depending on their relationship with him, they would affectionately call him Babai, Mamayya, Bava, or other familial names. These names reflected something deeper than familiarity. They reflected the place he held in people's lives. To many villagers, he was not simply an electrician or someone they happened to know. He was one of their own—someone they could approach, speak to freely and trust. A large part of the village knew him, and he maintained genuine relationships with people across different generations."
+      },
+      "06": {
+        "number": "06",
+        "title": "The Simple Things He Loved",
+        "year": "",
+        "content": "For all the responsibilities he carried, Balarama Krishna also had his own simple routines and joys. One of the things he loved most was tea. Tea was not simply an occasional drink for him. He had a habit of enjoying it several times throughout the day, and tea shops became familiar places in his everyday routine. He would often sit at a tea shop with a cup of tea and read the daily newspaper, keeping up with the news and happenings around him. These small routines were part of who he was—the ordinary moments that, together, made up the rhythm of his everyday life."
+      },
+      "07": {
+        "number": "07",
+        "title": "A Life of Hard Work",
+        "year": "2020",
+        "content": "For his family, Balarama Krishna was the person who stood at the forefront of their everyday life—the one who worked hard to bring home their livelihood and ensure that his family was cared for. His profession as a private electrician became a defining part of his life. Through years of dedicated work, he earned the trust of the people who depended on his skills. In 2020, his family moved from Bhattiprolu to Guntur in search of better living conditions and opportunities. Even after moving to Guntur, he continued his work as a private electrician. In a new city, he gradually built another circle of relationships and became known to people there as well. The same qualities that had earned him the affection and trust of people in Bhattiprolu—his honesty, hard work and approachable nature—helped him establish meaningful relationships in Guntur."
+      },
+      "08": {
+        "number": "08",
+        "title": "The Life He Built",
+        "year": "",
+        "content": "From a middle-class childhood in Bhattiprolu to becoming an NCC cadet, a young man who once dreamed of joining the Indian Army, a skilled electrician, a husband, a father, and a person deeply connected to the people around him, Balarama Krishna lived a life shaped by hard work, responsibility, honesty and human relationships. His life was not defined by grand titles or extraordinary possessions. It was defined by the everyday things that matter most—a family he cared for, work he took pride in, responsibilities he carried, people who trusted him, and relationships that extended far beyond his immediate family. For some, he was Babai. For others, Mamayya or Bava. And to his family, he was the person who stood at the heart of their lives. This was the life of Kanagala Balarama Krishna."
+      }
+    }
+  },
+  "finalJourney": {
+    "kicker": "The Final Journey",
+    "title": "His Final Chapter",
+    "content": "[FINAL JOURNEY STORY TO BE PROVIDED]"
+  },
+  "giftOfLife": {
+    "kicker": "Gift of Life",
+    "title": "A Selfless Final Act",
+    "content": "[ORGAN DONATION STORY TO BE PROVIDED]"
+  },
+  "organDonation": {
+    "kicker": "Organ Donation Legacy",
+    "title": "His Gift Lives On",
+    "content": "[ORGAN DONATION DETAILS TO BE PROVIDED]"
+  },
+  "recognition": {
+    "kicker": "Certificates & Recognition",
+    "title": "Official Recognition",
+    "content": "[CERTIFICATE INFORMATION TO BE PROVIDED]"
+  },
+  "gallery": {
+    "kicker": "Photo Gallery",
+    "title": "Memories in Photographs",
+    "categories": {
+      "childhood": "Childhood",
+      "family": "Family",
+      "work": "Work",
+      "everyday": "Everyday Life",
+      "memories": "Memories",
+      "finalYears": "Final Years",
+      "legacy": "Legacy"
+    }
+  },
+  "legacy": {
+    "kicker": "His Legacy",
+    "title": "A Lasting Impact",
+    "content": "[LEGACY MESSAGE TO BE PROVIDED]"
+  },
+  "closing": {
+    "title": "Kanagala Balarama Krishna",
+    "subtitle": "A Life Remembered. A Legacy Preserved.",
+    "message": "[FINAL FAMILY MESSAGE TO BE PROVIDED]",
+    "continuation": "His story continues in the lives and memories he left behind."
+  },
+  "chapterTransition": {
+    "nextChapter": "Next Chapter"
+  },
+  "footer": {
+    "title": "Kanagala Balarama Krishna",
+    "subtitle": "A Life Remembered. A Legacy Preserved.",
+    "familyWebsite": "Family website"
+  }
+}
