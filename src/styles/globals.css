@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;500;600&family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", "Noto Serif Telugu", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans Telugu", system-ui, sans-serif;
+
+  --color-brand-ivory: #f7f4ee;
+  --color-brand-sand: #eee8de;
+  --color-brand-surface: #fcfaf6;
+  --color-brand-charcoal: #24221f;
+  --color-brand-dark: #171614;
+  --color-brand-bronze: #a3835a;
+  --color-brand-bronze-dark: #8b6d47;
+  --color-brand-muted: #817a70;
+  --color-brand-secondary: #5e5952;
+  --color-brand-border: #d8d0c4;
+}
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #f7f4ee;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f4ee;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(163, 131, 90, 0.28);
+  color: #24221f;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #a3835a;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.section-kicker::before,
+.section-kicker::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1px;
+  background: #a3835a;
+  opacity: 0.7;
+}
+
+.hero-noise {
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.hero-halo {
+  background: radial-gradient(
+    circle,
+    rgba(163, 131, 90, 0.15) 0%,
+    rgba(163, 131, 90, 0.055) 34%,
+    rgba(163, 131, 90, 0) 70%
+  );
+  filter: blur(2px);
+}
+
+.hero-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(163, 131, 90, 0.24);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+.hero-ring-one {
+  height: 68%;
+  width: 68%;
+}
+
+.hero-ring-two {
+  height: 84%;
+  width: 84%;
+  border-color: rgba(247, 244, 238, 0.075);
+}
+
+.hero-star {
+  position: absolute;
+  z-index: 5;
+  color: #a3835a;
+  font-size: 0.8rem;
+  text-shadow: 0 0 22px rgba(163, 131, 90, 0.6);
+}
+
+.hero-dot {
+  position: absolute;
+  z-index: 5;
+  height: 3px;
+  width: 3px;
+  border-radius: 9999px;
+  background: #a3835a;
+  box-shadow: 0 0 16px rgba(163, 131, 90, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-ring-one {
+    height: 58%;
+    width: 58%;
+  }
+
+  .hero-ring-two {
+    height: 74%;
+    width: 74%;
+  }
+}
