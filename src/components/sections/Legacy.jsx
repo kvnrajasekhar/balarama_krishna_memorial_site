@@ -16,11 +16,11 @@ export function Legacy() {
           transition={{ duration: 0.8 }}
         >
           <SectionLabel>{t("legacy.kicker")}</SectionLabel>
-          
+
           <h2 className="mt-6 font-display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.025em] text-[#24221f]">
             {t("legacy.title")}
           </h2>
-          
+
           <div className="mt-12 p-8 border border-[#d8d0c4] bg-[#fcfaf6]">
             <p className="font-sans text-lg leading-8 text-[#5e5952]">
               {t("legacy.content")}
@@ -29,9 +29,10 @@ export function Legacy() {
         </motion.div>
       </div>
 
-      <ChapterTransition 
+      <ChapterTransition
         nextChapter="Closing"
         nextChapterId="closing"
+        targetPath="/story/closing"
         label="Read final message"
       />
     </section>

@@ -43,9 +43,10 @@ export function Biography() {
         </div>
       </div>
 
-      <ChapterTransition 
+      <ChapterTransition
         nextChapter={t("finalJourney.title")}
         nextChapterId="final-journey"
+        targetPath="/story/final-journey"
         label="Continue to his final journey"
       />
     </section>

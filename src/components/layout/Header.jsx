@@ -20,11 +20,11 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { key: "hisLife", to: "/biography" },
-    { key: "finalJourney", to: "/final-journey" },
-    { key: "giftOfLife", to: "/final-journey" },
-    { key: "recognition", to: "/final-journey" },
-    { key: "memories", to: "/final-journey" },
+    { key: "hisLife", to: "/story/biography" },
+    { key: "finalJourney", to: "/story/final-journey" },
+    { key: "giftOfLife", to: "/story/gift-of-life" },
+    { key: "recognition", to: "/story/recognition" },
+    { key: "memories", to: "/story/gallery" },
   ];
 
   const isActive = (to) => {
@@ -37,11 +37,10 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
           ? "bg-[#f7f4ee]/95 backdrop-blur-sm border-b border-[#d8d0c4]/50 py-4"
           : "bg-transparent py-6"
-      }`}
+        }`}
     >
       <div className="mx-auto max-w-[1500px] px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between">
@@ -54,11 +53,10 @@ export function Header() {
               <Link
                 key={item.key}
                 to={item.to}
-                className={`font-sans text-xs tracking-wide transition-colors ${
-                  isActive(item.to)
+                className={`font-sans text-xs tracking-wide transition-colors ${isActive(item.to)
                     ? "text-[#a3835a]"
                     : "text-[#5e5952] hover:text-[#a3835a]"
-                }`}
+                  }`}
               >
                 {t(`nav.${item.key}`)}
               </Link>
@@ -89,11 +87,10 @@ export function Header() {
                 <Link
                   key={item.key}
                   to={item.to}
-                  className={`block font-sans text-sm transition-colors py-2 ${
-                    isActive(item.to)
+                  className={`block font-sans text-sm transition-colors py-2 ${isActive(item.to)
                       ? "text-[#a3835a]"
                       : "text-[#5e5952] hover:text-[#a3835a]"
-                  }`}
+                    }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t(`nav.${item.key}`)}

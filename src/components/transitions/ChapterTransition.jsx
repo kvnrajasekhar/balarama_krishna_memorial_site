@@ -1,11 +1,18 @@
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/Button";
 
-export function ChapterTransition({ nextChapter, nextChapterId, label }) {
+export function ChapterTransition({ nextChapter, nextChapterId, label, targetPath }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const handleClick = () => {
+    if (targetPath) {
+      navigate(targetPath);
+      return;
+    }
+
     const element = document.getElementById(nextChapterId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -30,7 +37,7 @@ export function ChapterTransition({ nextChapter, nextChapterId, label }) {
             <div className="h-px flex-1 bg-[#d8d0c4]" />
           </div>
 
-          <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] tracking-tight text-[#24221f]">
+          <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] tracking-tight text-[#a3835a] ">
             {nextChapter}
           </h3>
 

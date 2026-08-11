@@ -18,10 +18,10 @@ const galleryImages = [
   { src: "/images/Nanna/nanna-e3.jpg", category: "memories", size: "medium" },
   { src: "/images/Nanna/nanna-e4.jpg", category: "memories", size: "small" },
   { src: "/images/Nanna/nanna-image.jpg", category: "finalYears", size: "medium" },
-  { src: "/images/Nanna/eenadu-paper-cutting.jpeg", category: "recognition", size: "medium" },
-  { src: "/images/Nanna/sakshi-paper-cutting.jpeg", category: "recognition", size: "medium" },
-  { src: "/images/Nanna/news-app-1.jpeg", category: "recognition", size: "medium" },
-  { src: "/images/Nanna/ambulance-banner.jpeg", category: "finalYears", size: "large" },
+  { src: "/images/Nanna/school-he-studied.jpeg", category: "childhood", size: "medium" },
+  { src: "/images/Nanna/bhaskar-anna-marriage.jpeg", category: "family", size: "medium" },
+  { src: "/images/Nanna/bhaskar-anna-marriage2.jpeg", category: "family", size: "medium" },
+  // { src: "/images/Nanna/ambulance-banner.jpeg", category: "finalYears", size: "large" },
 ];
 
 export function Gallery() {
@@ -29,10 +29,10 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const categories = ["all", "family", "childhood", "work", "everyday", "memories", "finalYears", "recognition"];
-  
-  const filteredImages = selectedCategory === "all" 
-    ? galleryImages 
+  const categories = ["all", "family", "childhood", "work", "everyday", "memories", "recognition"];
+
+  const filteredImages = selectedCategory === "all"
+    ? galleryImages
     : galleryImages.filter(img => img.category === selectedCategory);
 
   const getSizeClasses = (size) => {
@@ -55,7 +55,7 @@ export function Gallery() {
           className="text-center mb-16"
         >
           <SectionLabel>{t("gallery.kicker")}</SectionLabel>
-          
+
           <h2 className="mt-6 font-display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.025em] text-[#24221f]">
             {t("gallery.title")}
           </h2>
@@ -73,11 +73,10 @@ export function Gallery() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-5 py-2.5 font-sans text-sm tracking-wide transition-all duration-300 ${
-                selectedCategory === category
-                  ? "bg-[#a3835a] text-white"
-                  : "bg-[#f7f4ee] text-[#5e5952] hover:bg-[#d8d0c4]"
-              }`}
+              className={`px-5 py-2.5 font-sans text-sm tracking-wide transition-all duration-300 ${selectedCategory === category
+                ? "bg-[#a3835a] text-white"
+                : "bg-[#f7f4ee] text-[#5e5952] hover:bg-[#d8d0c4]"
+                }`}
             >
               {category === "all" ? "All" : t(`gallery.categories.${category}`)}
             </button>
@@ -117,9 +116,10 @@ export function Gallery() {
           ))}
         </motion.div>
 
-        <ChapterTransition 
+        <ChapterTransition
           nextChapter={t("legacy.title")}
           nextChapterId="legacy"
+          targetPath="/story/legacy"
           label="Reflect on his legacy"
         />
       </div>

@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { Hero } from "../components/hero/Hero";
-import { Welcome } from "../components/sections/Welcome";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -12,33 +11,37 @@ export function Landing() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (!maxScroll || maxScroll <= 1) {
+        return;
+      }
+
+      const scrollPercent = window.scrollY / maxScroll;
       if (scrollPercent > 0.85 && !showTransition) {
         setShowTransition(true);
         setTimeout(() => {
-          navigate("/biography");
-        }, 800);
+          navigate("/welcome");
+        }, 700);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navigate, showTransition]);
 
   return (
     <main className="min-h-screen bg-[#f7f4ee] text-[#24221f]">
       <Header />
-      
+
       <Hero />
-      <Welcome />
-      
+
       <AnimatePresence>
         {showTransition && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#171614] z-50 flex items-center justify-center"
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-[#171614]"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -51,7 +54,7 @@ export function Landing() {
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       <Footer />
     </main>
   );

@@ -17,20 +17,21 @@ export function WhoWasHe() {
           className="text-center"
         >
           <SectionLabel>{t("whoWasHe.kicker")}</SectionLabel>
-          
+
           <h2 className="mt-6 font-display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.025em] text-[#24221f]">
             {t("whoWasHe.title")}
           </h2>
-          
+
           <p className="mt-8 mx-auto max-w-2xl font-sans text-lg leading-8 text-[#5e5952]">
             {t("whoWasHe.content")}
           </p>
         </motion.div>
       </div>
 
-      <ChapterTransition 
+      <ChapterTransition
         nextChapter={t("biography.title")}
         nextChapterId="biography"
+        targetPath="/story/biography"
         label="Read his life story"
       />
     </section>

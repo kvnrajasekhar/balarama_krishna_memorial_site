@@ -13,20 +13,6 @@ export function Biography() {
 
   const chapterKeys = ["01", "02", "03", "04", "05", "06", "07", "08"];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      if (scrollPercent > 0.9 && !showTransition) {
-        setShowTransition(true);
-        setTimeout(() => {
-          navigate("/final-journey");
-        }, 800);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [navigate, showTransition]);
 
   return (
     <main className="min-h-screen bg-[#f7f4ee] text-[#24221f]">
@@ -75,7 +61,7 @@ export function Biography() {
         )}
       </AnimatePresence>
       
-      <Footer />
+
     </main>
   );
 }

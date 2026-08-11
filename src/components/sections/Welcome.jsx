@@ -16,16 +16,16 @@ export function Welcome() {
           transition={{ duration: 0.8 }}
         >
           <SectionLabel>{t("welcome.kicker")}</SectionLabel>
-          
+
           <h2 className="mt-6 font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-none tracking-[-0.025em] text-[#24221f]">
             {t("welcome.title")}
           </h2>
-          
+
           <div className="mt-8 space-y-6">
             <p className="mx-auto max-w-2xl font-sans text-lg leading-8 text-[#5e5952]">
               {t("welcome.content")}
             </p>
-            
+
             <p className="mx-auto max-w-2xl font-sans text-base leading-7 text-[#817a70]">
               {t("welcome.purpose")}
             </p>
@@ -33,9 +33,10 @@ export function Welcome() {
         </motion.div>
       </div>
 
-      <ChapterTransition 
+      <ChapterTransition
         nextChapter={t("whoWasHe.title")}
         nextChapterId="who-was-he"
+        targetPath="/story/who-was-he"
         label="Discover who he was"
       />
     </section>
