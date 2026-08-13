@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function ScrollCue({ targetId = "welcome" }) {
+    const { t } = useTranslation();
   return (
     <motion.a
       href={`#${targetId}`}
@@ -11,7 +13,7 @@ export function ScrollCue({ targetId = "welcome" }) {
       aria-label="Scroll to welcome"
     >
       <span className="font-sans text-[9px] uppercase tracking-[0.32em] text-white/40 transition-colors group-hover:text-white/70">
-        Explore his story
+        {t("hero.scrollCue")}
       </span>
       <motion.span
         className="flex h-10 w-6 items-start justify-center rounded-full border border-white/20 pt-2"
@@ -19,7 +21,7 @@ export function ScrollCue({ targetId = "welcome" }) {
         transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
       >
         <span className="h-1.5 w-px bg-[#a3835a]" />
-      </motion.span>
+      </motion.span>  
     </motion.a>
   );
 }

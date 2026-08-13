@@ -713,7 +713,7 @@ LEFT CHAPTERS | RIGHT STORY
 
 becomes on mobile:
 
-```text
+```text 
 01
 EARLY YEARS
 

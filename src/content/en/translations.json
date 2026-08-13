@@ -1,24 +1,46 @@
 {
   "nav": {
+    "story": "Story",
+    "welcome": "Welcome from the Family",
     "hisLife": "His Life",
     "finalJourney": "Final Journey",
     "giftOfLife": "Gift of Life",
+    "organDonation": "Legacy",
     "recognition": "Recognition",
+    "gallery": "Gallery",
+    "legacy": "His Legacy",
+    "closing": "Final Message",
     "memories": "Memories"
+  },
+  "storyTransitions": {
+    "continuing": "Continuing the story",
+    "returning": "Returning to the story"
+  },
+  "storyRoutes": {
+    "welcomeNext": "Continue to his life story",
+    "biographyNext": "Continue to his final journey",
+    "finalJourneyNext": "Discover his gift of life",
+    "giftOfLifeNext": "Learn about organ donation",
+    "organDonationNext": "View official recognition",
+    "recognitionNext": "View photo gallery",
+    "galleryNext": "Reflect on his legacy",
+    "legacyNext": "Read final message",
+    "closingNext": "Returning to the beginning"
   },
   "hero": {
     "kicker": "A life remembered",
     "name": "Kanagala Balarama Krishna",
-    "birthDate": "24 December 1965",
-    "deathDatePlaceholder": "His story continues",
+    "birthDate": "24 DECEMBER 1965",
     "tagline": "A life of truth, family, hard work, and human relationships.",
+    "beginStory": "Begin his story",
     "scrollCue": "Explore his story"
   },
   "welcome": {
     "kicker": "Welcome from the family",
     "title": "A Life Remembered",
-    "content": "[FAMILY WELCOME MESSAGE TO BE PROVIDED]",
-    "purpose": "This digital space preserves his memories, values, photographs, life story, and legacy for family, friends, and future generations."
+    "purpose": "This digital space preserves his memories, values, photographs, life story, and legacy for family, friends, and future generations.",
+    "withLove": "With love",
+    "familyName": "The Family of Sri Kanagala Balarama Krishna"
   },
   "whoWasHe": {
     "kicker": "Who was he?",
@@ -28,12 +50,13 @@
   "biography": {
     "kicker": "Biography",
     "title": "His Life Story",
+    "subtitle": "The Life of Kanagala Balarama Krishna",
     "chapters": {
       "01": {
         "number": "01",
         "title": "His Early Life",
         "year": "1965",
-        "content": "Kanagala Balarama Krishna was born on 24 December 1965 in Bhattiprolu, Guntur District, into a middle-class family. He was the youngest child of Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. He spent his childhood in Bhattiprolu and completed his primary and secondary education at Tamanna Mallikarjuna Rao High School, Bhattiprolu, up to the 10th class. Alongside his academics, he was also an NCC cadet, an experience that introduced him to discipline, responsibility and a sense of service from an early age. He completed his matriculation around 1979."
+        "content": "Kanagala Balarama Krishna was born on 24 December 1965 in Bhattiprolu, Guntur District, into a middle-class family. He was the youngest child of Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. He spent his childhood in Bhattiprolu and completed his primary and secondary education at Tamanna Mallikarjuna Rao High School, Bhattiprolu, up to the 10th class. Alongside his academics, he was also an NCC cadet, an experience that introduced him to discipline, responsibility and a sense of service from an early age. He completed his matriculation around 1980."
       },
       "02": {
         "number": "02",
@@ -82,7 +105,31 @@
   "finalJourney": {
     "kicker": "The Final Journey",
     "title": "His Final Chapter",
+    "continue": "Continue to Gift of Life",
     "summary": "The story of the day he left home, the accident, the hospital, the devastating news, and the final act that followed.",
+    "timeline": {
+      "day1Date": "03 AUGUST 2025",
+      "day1Time": "6:00 AM",
+      "day1Label": "He began his day",
+      "day2Date": "04 AUGUST 2025"
+    },
+    "metrics": {
+      "chanceOfSurvival": "chance of survival",
+      "weHeldOnToThis": "we held on to this"
+    },
+    "headings": {
+      "normalMorning": "A NORMAL MORNING",
+      "journeyHome": "THE JOURNEY HOME",
+      "travelingHome": "He was travelling home.",
+      "moveLeft": "He decided to move towards the left.",
+      "andThen": "And then...",
+      "everythingChanged": "Everything changed.",
+      "newsReachedUs": "THE NEWS REACHED US",
+      "atGgh": "AT GGH",
+      "morningWeNeverWanted": "THE MORNING WE NEVER WANTED",
+      "returningToGgh": "RETURNING TO GGH",
+      "theNight": "THE NIGHT"
+    },
     "sections": {
       "day1": {
         "title": "3 August 2025 — A Day That Began Like Any Other",
@@ -121,6 +168,9 @@
   "giftOfLife": {
     "kicker": "Gift of Life",
     "title": "A Selfless Final Act",
+    "openingEnded": "HIS LIFE ENDED.",
+    "openingContinued": "BUT HIS GIVING DID NOT.",
+    "continue": "Continue to Organ Donation",
     "summary": "The family’s decision, the hope that returned for a moment, and the dignity of a final goodbye that gave others a chance to live.",
     "sections": {
       "decision": {
@@ -157,6 +207,15 @@
     "kicker": "Organ Donation Legacy",
     "title": "The Lives He Touched",
     "intro": "Through his generosity and selflessness, Mr. Kanagala Balarama Krishna gave the gift of life to others even after his passing. His donated organs and tissues helped five individuals receive the possibility of a new or restored life.",
+    "headings": {
+      "giftContinues": "A GIFT THAT CONTINUES"
+    },
+    "labels": {
+      "liver": "LIVER",
+      "kidneys": "TWO KIDNEYS",
+      "eyes": "TWO EYES",
+      "heart": "HEART"
+    },
     "organs": {
       "liver": {
         "title": "One Liver",
@@ -185,6 +244,12 @@
   "recognition": {
     "kicker": "Certificates & Recognition",
     "title": "Honours & Recognition",
+    "archive": "ARCHIVE {{number}}",
+    "headings": {
+      "giftRecognized": "HIS GIFT WAS RECOGNIZED.",
+      "pressCoverage": "PRESS COVERAGE",
+      "officialCertificates": "OFFICIAL CERTIFICATES"
+    },
     "sections": {
       "jeevandan": {
         "title": "Acknowledgement of His Selflessness",
@@ -215,6 +280,7 @@
   "gallery": {
     "kicker": "Photo Gallery",
     "title": "Memories in Photographs",
+    "surfaceTitle": "Memories begin to surface...",
     "categories": {
       "childhood": "Childhood",
       "family": "Family",
@@ -229,6 +295,14 @@
   "legacy": {
     "kicker": "His Legacy",
     "title": "His Legacy",
+    "values": {
+      "honesty": "Honesty",
+      "hardWork": "Hard Work",
+      "family": "Family",
+      "relationships": "Relationships",
+      "selflessness": "Selflessness",
+      "finalMessage": "A Life that continued to live."
+    },
     "content": "Some lives are remembered for what they achieved. Others are remembered for how they made people feel. Balarama Krishna belonged to the latter. He did not live a life surrounded by titles or great possessions. He lived a life built on hard work, honesty, responsibility, family and relationships. He was an electrician by profession, but that was only one part of who he was. To his family, he was the person who carried their responsibilities on his shoulders. To the people of his village, he was someone they could trust. To many, he was not even addressed by his name—he was Babai, Mamayya, Bava, Tatayya—names that reflected the place he held in their hearts. He had dreams of his own. He once wished to serve the nation by joining the Indian Army. Although a fracture prevented that dream from becoming reality, the qualities behind that dream—discipline, courage, determination and a willingness to serve—remained with him throughout his life. His life was also made of simple things. A cup of tea. A newspaper at a familiar tea shop. A day's work. A conversation with someone he knew. A responsibility fulfilled. A family waiting for him to come home. These ordinary moments became extraordinary because they were his. And then, when life placed him in his final and most difficult moment, he gave one more thing. He gave what he could still give. Through organ and eye donation, his final act became a gift to others. His liver, two kidneys and two eyes were donated, giving five individuals the opportunity for a second life or restored vision. His heart could not ultimately be donated, despite initially positive test results, but even in that final chapter, his intention remained one of giving. His name was formally recognized by Jeevandan AP, and his eye donation was acknowledged by L V Prasad Eye Institute. But perhaps the greatest measure of his legacy is not written on a certificate. It lives in the people who remember him. In the family that carries his values forward. In the people who still remember calling him by affectionate names. In the stories that will be told about him. And in the lives that continue because, even in death, he gave something of himself to others. His life reminds us that a meaningful life does not have to be extraordinary in the eyes of the world. Sometimes, it is enough to work honestly, love deeply, carry your responsibilities, treat people with kindness, and leave behind something that helps another person live. That was his legacy. Kanagala Balarama Krishna may no longer walk among us, but the values he lived by, the relationships he built, the memories he created, and the lives touched by his final act continue to carry his presence forward. His journey ended. His legacy did not."
   },
   "closing": {

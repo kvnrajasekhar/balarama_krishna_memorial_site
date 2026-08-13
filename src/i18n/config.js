@@ -13,11 +13,19 @@ const resources = {
   },
 };
 
+// Get saved language from localStorage or default to English
+const getSavedLanguage = () => {
+  if (typeof window !== "undefined" && window.localStorage) {
+    return localStorage.getItem("language") || "en";
+  }
+  return "en";
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en",
+    lng: getSavedLanguage(),
     fallbackLng: "en",
     interpolation: {
       escapeValue: false,

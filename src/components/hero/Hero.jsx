@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { HeroPortrait } from "./HeroPortrait";
 import { ScrollCue } from "./ScrollCue";
 
 export function Hero() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section className="relative flex min-h-screen overflow-hidden bg-[#171614] text-[#f7f4ee]">
@@ -31,20 +33,18 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            Kanagala
+            {t("hero.name")}
             <br />
-            <span className="text-[#d8d0c4]">Balarama Krishna</span>
+            <span className="text-[#d8d0c4]"></span>
           </motion.h1>
 
           <motion.div
-            className="mt-8 flex items-center justify-center gap-4 font-sans text-xs tracking-[0.2em] text-white/50 lg:justify-start"
+            className="mt-8 flex items-center justify-center gap-3 font-sans text-[10px] tracking-[0.32em] text-white/55 lg:justify-start"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.75 }}
           >
             <span>{t("hero.birthDate")}</span>
-            <span className="text-[#a3835a]">—</span>
-            <span className="text-white/30">{t("hero.deathDatePlaceholder")}</span>
           </motion.div>
 
           <motion.p
@@ -55,12 +55,24 @@ export function Hero() {
           >
             {t("hero.tagline")}
           </motion.p>
+
+          <motion.button
+            type="button"
+            onClick={() => navigate("/welcome")}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.1 }}
+            className="mt-10 inline-flex items-center justify-center gap-3 self-center border border-[#a3835a]/70 bg-[#a3835a]/10 px-6 py-3 font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#f7f4ee] transition-colors duration-300 hover:bg-[#a3835a] hover:text-[#171614] lg:self-start"
+          >
+            {t("hero.beginStory")}
+            <span aria-hidden="true">↓</span>
+          </motion.button>
         </div>
 
         <div className="order-1 lg:order-2">
-          <HeroPortrait 
-            src="/images/nanna-image.png" 
-            alt="Kanagala Balarama Krishna" 
+          <HeroPortrait
+            src="/images/nanna-image-modified.png"
+            alt="Kanagala Balarama Krishna"
           />
         </div>
       </div>

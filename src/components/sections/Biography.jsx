@@ -47,7 +47,7 @@ export function Biography() {
         nextChapter={t("finalJourney.title")}
         nextChapterId="final-journey"
         targetPath="/story/final-journey"
-        label="Continue to his final journey"
+        label={t("storyRoutes.biographyNext")}
       />
     </section>
   );

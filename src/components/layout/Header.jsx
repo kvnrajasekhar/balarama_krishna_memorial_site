@@ -23,6 +23,7 @@ export function Header() {
     { key: "hisLife", to: "/story/biography" },
     { key: "finalJourney", to: "/story/final-journey" },
     { key: "giftOfLife", to: "/story/gift-of-life" },
+    { key: "organDonation", to: "/story/organ-donation" },
     { key: "recognition", to: "/story/recognition" },
     { key: "memories", to: "/story/gallery" },
   ];
@@ -44,8 +45,8 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1500px] px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-display text-lg sm:text-xl tracking-tight text-[#24221f] hover:text-[#a3835a] transition-colors">
-            KANAGALA BALARAMA KRISHNA
+          <Link to="/" className="font-display text-lg sm:text-xl tracking-tight text-[#a3835a] transition-colors">
+            {t("hero.name")}
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

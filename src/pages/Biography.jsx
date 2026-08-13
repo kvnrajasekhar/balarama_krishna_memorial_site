@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
@@ -8,6 +9,7 @@ import { BiographyChapter } from "../components/biography/BiographyChapter";
 import { ChapterNavigation } from "../components/biography/ChapterNavigation";
 
 export function Biography() {
+  const {t} = useTranslation();
   const navigate = useNavigate();
   const [showTransition, setShowTransition] = useState(false);
 
@@ -21,9 +23,9 @@ export function Biography() {
       <section className="px-6 py-28 sm:px-10 lg:px-16 lg:py-40">
         <div className="mx-auto max-w-[1500px]">
           <div className="text-center mb-16 lg:mb-20">
-            <SectionLabel>Biography</SectionLabel>
+            <SectionLabel>{t("biography.title")}</SectionLabel>
             <h2 className="mt-6 font-display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.025em] text-[#24221f]">
-              The Life of Kanagala Balarama Krishna
+              {t("biography.subtitle")}
             </h2>
           </div>
 

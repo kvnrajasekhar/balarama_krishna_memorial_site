@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ChapterTransition } from "../transitions/ChapterTransition";
 import { X } from "lucide-react";
+import { MemoryImage, RevealText } from "../storytelling";
 
 const galleryImages = [
   { src: "/images/Nanna/nanna-1.png", category: "family", size: "large" },
@@ -21,28 +22,11 @@ const galleryImages = [
   { src: "/images/Nanna/school-he-studied.jpeg", category: "childhood", size: "medium" },
   { src: "/images/Nanna/bhaskar-anna-marriage.jpeg", category: "family", size: "medium" },
   { src: "/images/Nanna/bhaskar-anna-marriage2.jpeg", category: "family", size: "medium" },
-  // { src: "/images/Nanna/ambulance-banner.jpeg", category: "finalYears", size: "large" },
 ];
 
 export function Gallery() {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const categories = ["all", "family", "childhood", "work", "everyday", "memories", "recognition"];
-
-  const filteredImages = selectedCategory === "all"
-    ? galleryImages
-    : galleryImages.filter(img => img.category === selectedCategory);
-
-  const getSizeClasses = (size) => {
-    switch (size) {
-      case "large": return "col-span-2 row-span-2";
-      case "medium": return "col-span-1 row-span-2";
-      case "small": return "col-span-1 row-span-1";
-      default: return "col-span-1 row-span-1";
-    }
-  };
 
   return (
     <section id="gallery" className="bg-[#eee8de] px-6 py-28 sm:px-10 lg:px-16 lg:py-40">
@@ -61,66 +45,34 @@ export function Gallery() {
           </h2>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-5 py-2.5 font-sans text-sm tracking-wide transition-all duration-300 ${selectedCategory === category
-                ? "bg-[#a3835a] text-white"
-                : "bg-[#f7f4ee] text-[#5e5952] hover:bg-[#d8d0c4]"
-                }`}
-            >
-              {category === "all" ? "All" : t(`gallery.categories.${category}`)}
-            </button>
-          ))}
-        </motion.div>
+        {/* Memories Emerging - Editorial Memory Wall */}
+        <div className="mt-20">
+          <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] leading-none tracking-[-0.03em] text-[#5e5952] mb-12 text-center">
+            {t("gallery.surfaceTitle")}
+          </RevealText>
+        </div>
 
-        {/* Masonry Gallery */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]"
-        >
-          {filteredImages.map((image, index) => (
-            <motion.div
-              key={image.src}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              className={`relative overflow-hidden cursor-pointer group ${getSizeClasses(image.size)}`}
-              onClick={() => setSelectedImage(image)}
-            >
-              <img
+        {/* Editorial Memory Wall - Varying sizes and whitespace */}
+        <div className="mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+            {galleryImages.map((image, index) => (
+              <MemoryImage
+                key={image.src}
                 src={image.src}
-                alt="Gallery photograph"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                alt={`Memory - ${image.category}`}
+                size={image.size}
+                onClick={() => setSelectedImage(image)}
+                delay={index * 0.08}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="font-sans text-xs text-white/90 uppercase tracking-wider">
-                  {t(`gallery.categories.${image.category}`)}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </div>
 
         <ChapterTransition
           nextChapter={t("legacy.title")}
           nextChapterId="legacy"
           targetPath="/story/legacy"
-          label="Reflect on his legacy"
+          label={t("storyRoutes.galleryNext")}
         />
       </div>
 
