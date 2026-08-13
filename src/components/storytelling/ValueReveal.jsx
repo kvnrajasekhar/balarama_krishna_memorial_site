@@ -42,7 +42,7 @@ const {t} = useTranslation();
         {values.map((value, index) => (
           <p
             key={index}
-            className="font-display text-[clamp(2.5rem,5vw,5rem)] leading-none tracking-[-0.05em] text-[#24221f] mb-12"
+            className="font-display text-[clamp(2.5rem,5vw,5rem)] leading-none tracking-[-0.05em] text-[#a3835a] mb-12"
           >
             {value}
           </p>
@@ -70,7 +70,7 @@ const {t} = useTranslation();
             delay: isMobile ? 0.1 + (index * 0.15) : 0.3 + (index * 0.25), // Faster delays on mobile
             ease: [0.22, 1, 0.36, 1] 
           }}
-          className="font-display text-[clamp(2.5rem,5vw,5rem)] leading-none tracking-[-0.05em] text-[#24221f] mb-16"
+          className="font-display text-[clamp(2.5rem,5vw,5rem)] leading-none tracking-[-0.05em] text-[#a3835a] mb-16"
         >
           {value}
         </motion.p>
@@ -86,7 +86,7 @@ const {t} = useTranslation();
             delay: isMobile ? 0.1 + (values.length * 0.15) : 0.3 + (values.length * 0.25), // Faster delays on mobile
             ease: [0.22, 1, 0.36, 1] 
           }}
-          className="font-display text-[clamp(1.8rem,3vw,3rem)] leading-[1.1] tracking-[-0.03em] text-[#a3835a]"
+          className="font-display text-[clamp(1.8rem,3vw,3rem)] leading-[1.1] tracking-[-0.03em] text-[#24221f]"
         >
           {finalMessage}
         </motion.p>

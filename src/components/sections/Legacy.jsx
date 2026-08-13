@@ -8,7 +8,7 @@ export function Legacy() {
   const { t } = useTranslation();
 
   const values = [
-    t("legacy.values.honesty"),
+    // t("legacy.values.honesty"),
     t("legacy.values.hardWork"),
     t("legacy.values.family"),
     t("legacy.values.relationships"),
