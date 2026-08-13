@@ -5,7 +5,7 @@ export function HeroPortrait({ src, alt }) {
   const [imageReady, setImageReady] = useState(true);
 
   return (
-    <div className="relative mx-auto flex h-[62vh] min-h-[470px] w-full max-w-[560px] items-end justify-center sm:h-[68vh] lg:h-[76vh]">
+    <div className="relative mx-auto flex h-[62vh] min-h-[470px] w-full max-w-[560px] items-end justify-center -mt-12 sm:h-[68vh] sm:mt-0 lg:h-[76vh] lg:mt-0">
       {/* Soft halo */}
       <motion.div
         aria-hidden="true"

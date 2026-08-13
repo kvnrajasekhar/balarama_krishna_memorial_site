@@ -13,7 +13,7 @@ export function Hero() {
       <div className="absolute inset-0 hero-noise" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(163,131,90,0.09),transparent_32%)]" />
 
-      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1500px] grid-cols-1 items-center px-6 pb-20 pt-10 sm:px-10 lg:grid-cols-[0.82fr_1.18fr] lg:px-16 lg:pb-0 lg:pt-0">
+      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-[1500px] grid-cols-1 items-center px-6 pb-32 pt-10 sm:px-10 lg:grid-cols-[0.82fr_1.18fr] lg:px-16 lg:pb-0 lg:pt-0">
         <div className="order-2 flex flex-col justify-center text-center lg:order-1 lg:pr-10 lg:text-left">
           <motion.div
             className="mb-7 flex items-center justify-center gap-4 lg:justify-start"
@@ -62,14 +62,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1.1 }}
-            className="mt-10 inline-flex items-center justify-center gap-3 self-center border border-[#a3835a]/70 bg-[#a3835a]/10 px-6 py-3 font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#f7f4ee] transition-colors duration-300 hover:bg-[#a3835a] hover:text-[#171614] lg:self-start"
+            className="mt-10 mb-16 inline-flex items-center justify-center gap-3 self-center border border-[#a3835a]/70 bg-[#a3835a]/10 px-6 py-3 font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#f7f4ee] transition-colors duration-300 hover:bg-[#a3835a] hover:text-[#171614] lg:self-start lg:mb-0"
           >
             {t("hero.beginStory")}
             <span aria-hidden="true">↓</span>
           </motion.button>
         </div>
 
-        <div className="order-1 lg:order-2">
+        <div className="order-1 mb-12 lg:order-2 lg:mb-0">
           <HeroPortrait
             src="/images/nanna-image-modified.png"
             alt="Kanagala Balarama Krishna"

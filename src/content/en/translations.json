@@ -35,6 +35,14 @@
     "beginStory": "Begin his story",
     "scrollCue": "Explore his story"
   },
+  "languageSelection": {
+    "title": "Welcome",
+    "message": "Please select your preferred language to explore the memorial of Kanagala Balarama Krishna",
+    "inclusiveMessage": "This memorial honors the life and legacy of a beloved father, husband, and community member. We invite you to experience his story in the language that feels most comfortable to you.",
+    "english": "English",
+    "telugu": "తెలుగు",
+    "continue": "Continue"
+  },
   "welcome": {
     "kicker": "Welcome from the family",
     "title": "A Life Remembered",
@@ -187,6 +195,7 @@
       },
       "goodbye": {
         "title": "The Final Goodbye",
+        "subtitle":"",
         "content": "At around 11:00 AM, the doctors began moving him to the operation theatre. Before he was taken inside, our family and all our relatives gave him their final messages and condolences. It was an incredibly painful moment. We watched him being taken away, carrying immense sorrow and pain in our hearts. But alongside that pain was another feeling—immense pride. He was giving others a chance at life. Even though we were losing him, a part of him would continue to live through the lives of others. With that thought, we watched him being taken into the operation theatre."
       },
       "press": {

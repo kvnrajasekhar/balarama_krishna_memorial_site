@@ -8,7 +8,7 @@ import { ChapterNavigation } from "../biography/ChapterNavigation";
 export function Biography() {
   const { t } = useTranslation();
 
-  const chapterKeys = ["01", "02", "03", "04", "05", "06", "07"];
+  const chapterKeys = ["01", "02", "03", "04", "05", "06", "07", "08"];
 
   return (
     <section id="biography" className="bg-[#f7f4ee] px-6 py-28 sm:px-10 lg:px-16 lg:py-40">

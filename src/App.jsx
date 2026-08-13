@@ -9,6 +9,7 @@ import { Gallery } from "./components/sections/Gallery";
 import { Legacy } from "./components/sections/Legacy";
 import { Closing } from "./components/sections/Closing";
 import { Landing } from "./pages/Landing";
+import { LanguageSelectionPage } from "./pages/LanguageSelection";
 import { Biography } from "./pages/Biography";
 import { SectionPage } from "./pages/SectionPage";
 import { WelcomeStory } from "./pages/WelcomeStory";
@@ -20,8 +21,9 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/welcome" element={<SectionPage section={WelcomeStory} nextPath="/story/biography" nextLabel={t("storyRoutes.welcomeNext")} previousPath="/" previousLabel={t("storyRoutes.closingNext")} />} />
+        <Route path="/" element={<LanguageSelectionPage />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/welcome" element={<SectionPage section={WelcomeStory} nextPath="/story/biography" nextLabel={t("storyRoutes.welcomeNext")} previousPath="/landing" previousLabel={t("storyRoutes.closingNext")} />} />
         <Route path="/story/biography" element={<SectionPage section={Biography} nextPath="/story/final-journey" nextLabel={t("storyRoutes.biographyNext")} previousPath="/welcome" previousLabel={t("storyRoutes.welcomeNext")} />} />
         <Route path="/story/final-journey" element={<SectionPage section={FinalJourney} nextPath="/story/gift-of-life" nextLabel={t("storyRoutes.finalJourneyNext")} previousPath="/story/biography" previousLabel={t("storyRoutes.biographyNext")} />} />
         <Route path="/story/gift-of-life" element={<SectionPage section={GiftOfLife} nextPath="/story/organ-donation" nextLabel={t("storyRoutes.giftOfLifeNext")} previousPath="/story/final-journey" previousLabel={t("storyRoutes.finalJourneyNext")} />} />

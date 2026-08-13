@@ -71,7 +71,7 @@ export function GiftOfLife() {
           
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-              A DECISION BORN FROM LOVE
+              {t("giftOfLife.sections.decision.title")}
             </RevealText>
           </div>
 
@@ -85,7 +85,7 @@ export function GiftOfLife() {
         {/* A MOMENT OF HOPE */}
         <div className="mt-48">
           <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-            A MOMENT OF HOPE
+            {t("giftOfLife.sections.hope.title")}
           </RevealText>
 
           <NarrativeBlock delay={0.5} className="max-w-3xl">
@@ -101,7 +101,7 @@ export function GiftOfLife() {
           
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-              THE FINAL MORNING
+              {t("giftOfLife.sections.finalMorning.title")}
             </RevealText>
           </div>
 
@@ -115,9 +115,9 @@ export function GiftOfLife() {
         {/* THE FINAL GOODBYE */}
         <div className="mt-48">
           <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-            THE FINAL GOODBYE
+            {t("giftOfLife.sections.goodbye.title")}
             <br />
-            <span className="text-[#a3835a]">Words, tears, and grace</span>
+            <span className="text-[#a3835a]">{t("giftOfLife.sections.goodbye.subtitle")}</span>
           </RevealText>
 
           <NarrativeBlock delay={0.5} className="max-w-3xl">
@@ -130,7 +130,7 @@ export function GiftOfLife() {
         {/* BEYOND OUR FAMILY */}
         <div className="mt-48">
           <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-            BEYOND OUR FAMILY
+            {t("giftOfLife.sections.press.title")}
           </RevealText>
 
           <NarrativeBlock delay={0.5} className="max-w-3xl">
@@ -146,7 +146,7 @@ export function GiftOfLife() {
           
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-              THE FINAL MOMENT
+              {t("giftOfLife.sections.finalMoment.title")}
             </RevealText>
           </div>
 
@@ -160,7 +160,7 @@ export function GiftOfLife() {
         {/* A TRIBUTE */}
         <div className="mt-48">
           <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
-            A TRIBUTE FROM GGH, GUNTUR
+            {t("giftOfLife.sections.tribute.title")}
           </RevealText>
 
           <NarrativeBlock delay={0.5} className="max-w-3xl">

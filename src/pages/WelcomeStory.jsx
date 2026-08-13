@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 
 const familyWelcomeContent = {
     en: [
-        "Welcome to the remembrance of our beloved husband, father, brother, and friend, Sri Kanagala Balarama Krishna.",
+        "Welcome to the remembrance of our beloved husband, father, Sri Kanagala Balarama Krishna.",
         "With love and gratitude, we have created this space to remember and celebrate a life that meant so much to us and to the many people whose lives he touched.",
         "For our family, he was the person at the heart of our home—the one who worked tirelessly for us, carried his responsibilities with dedication, and filled our lives with countless moments that we will cherish forever.",
         "To those who knew him beyond our family, he was a trusted friend, a familiar face, and someone they could approach with warmth and confidence.",
@@ -15,7 +15,7 @@ const familyWelcomeContent = {
         "Whatever you feel, we hope you will carry one thing with you when you leave this space: a little more of the man we were blessed to call ours."
     ],
     te: [
-        "మా ప్రియమైన భర్త, తండ్రి, మరియు ఆత్మీయుడైన శ్రీ కనగాల బాలరామ కృష్ణ గారి జ్ఞాపకార్థం రూపొందించిన ఈ స్మృతి ప్రదేశానికి మీకు హృదయపూర్వక స్వాగతం.",
+        "మా ప్రియమైన భర్త, తండ్రి, శ్రీ కనగాల బలరామ కృష్ణ గారి జ్ఞాపకార్థం రూపొందించిన ఈ స్మృతి ప్రదేశానికి మీకు హృదయపూర్వక స్వాగతం.",
         "ఆయనను ప్రేమతో, కృతజ్ఞతతో, గౌరవంతో స్మరించుకోవడానికి ఈ డిజిటల్ జ్ఞాపక ప్రదేశాన్ని రూపొందించాము.",
         "మా కుటుంబానికి ఆయన మా ఇంటికి ఆధారం. మా కోసం ఎంతో కష్టపడి పనిచేసిన వ్యక్తి. తన బాధ్యతలను నిబద్ధతతో నిర్వర్తించిన వ్యక్తి.",
         "మా కుటుంబాన్ని దాటి ఆయనను తెలిసిన వారికి ఆయన ఒక నమ్మకమైన వ్యక్తి, ఆత్మీయమైన పరిచయం, తమ మనసులోని మాటను చెప్పుకోగల మనిషి.",

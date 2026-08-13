@@ -6,7 +6,7 @@ export function ScrollCue({ targetId = "welcome" }) {
   return (
     <motion.a
       href={`#${targetId}`}
-      className="group absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3"
+      className="group absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 sm:bottom-10"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.7, duration: 0.7 }}
