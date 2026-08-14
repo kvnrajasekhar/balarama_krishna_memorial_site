@@ -1,9 +1,28 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { IntimateLetter } from "../storytelling";
+import { useRef, useEffect, useState } from "react";
+
+// Custom hook to detect mobile devices
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
 
 export function Closing() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
 
   return (
     <section id="closing" className="bg-[#171614] px-6 py-28 sm:px-10 lg:px-16 lg:py-40 text-[#f7f4ee]">
@@ -11,8 +30,8 @@ export function Closing() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: isMobile ? "-50px" : "-100px" }}
+          transition={{ duration: isMobile ? 0.6 : 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.025em] text-[#f7f4ee]">
@@ -35,8 +54,8 @@ export function Closing() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          viewport={{ once: true, margin: isMobile ? "-50px" : "-100px" }}
+          transition={{ duration: isMobile ? 0.6 : 0.8, delay: isMobile ? 0.3 : 1.2 }}
           className="mt-16 text-center"
         >
           <p className="font-sans text-base leading-7 text-white/40 italic">
