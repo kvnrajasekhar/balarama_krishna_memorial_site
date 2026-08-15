@@ -22,6 +22,10 @@ const galleryImages = [
   { src: "/images/Nanna/school-he-studied.jpeg", category: "childhood" },
   { src: "/images/Nanna/bhaskar-anna-marriage.jpeg", category: "family" },
   { src: "/images/Nanna/bhaskar-anna-marriage2.jpeg", category: "family" },
+  { src: "/images/Nanna/adult-age.jpeg", category: "work" },
+  { src: "/images/Nanna/bhaskar-anna-marriage3.jpeg", category: "family" },
+  { src: "/images/Nanna/brothers.jpeg", category: "family" },
+  { src: "/images/Nanna/family.jpeg", category: "family" },
 ];
 
 /**
