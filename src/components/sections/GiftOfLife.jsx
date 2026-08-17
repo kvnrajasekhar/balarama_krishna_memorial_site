@@ -169,6 +169,19 @@ export function GiftOfLife() {
             </RevealText>
           </NarrativeBlock>
         </div>
+
+        {/* FELICITATION & HONOURING */}
+        <div className="mt-48">
+          <RevealText variant="mask" delay={0.3} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
+            {t("giftOfLife.sections.felicitation.title")}
+          </RevealText>
+
+          <NarrativeBlock delay={0.5} className="max-w-3xl">
+            <RevealText variant="line" delay={0.2} className="font-sans text-lg leading-9 text-[#4d4a46]">
+              {t("giftOfLife.sections.felicitation.content")}
+            </RevealText>
+          </NarrativeBlock>
+        </div>
       </div>
 
       <ChapterTransition
