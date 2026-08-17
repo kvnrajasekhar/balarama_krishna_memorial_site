@@ -64,7 +64,11 @@
         "number": "01",
         "title": "His Early Life",
         "year": "1965",
-        "content": "Kanagala Balarama Krishna was born on 24 December 1965 in Bhattiprolu, Guntur District, into a middle-class family. He was the youngest child of Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. He spent his childhood in Bhattiprolu and completed his primary and secondary education at Tamanna Mallikarjuna Rao High School, Bhattiprolu, up to the 10th class. Alongside his academics, he was also an NCC cadet, an experience that introduced him to discipline, responsibility and a sense of service from an early age. He completed his matriculation around 1980."
+        "content": "Kanagala Balarama Krishna was born on 24 December 1965 in Bhattiprolu, Guntur District, into a middle-class family. He was the youngest child of Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. He spent his childhood in Bhattiprolu and completed his primary and secondary education at Tamanna Mallikarjuna Rao High School, Bhattiprolu, up to the 10th class. Alongside his academics, he was also an NCC cadet, an experience that introduced him to discipline, responsibility and a sense of service from an early age. He completed his matriculation around 1980.",
+        "images": [
+          { "src": "/images/Nanna/parents.jpeg", "alt": "Parents of Balarama Krishna", "caption": "His beloved parents - Late Sri Kanagala Venkata Subba Rao and Late Smt. Kanagala Vijaya Mahalaxmi. Balarama Krishna was their youngest son." },
+          { "src": "/images/Nanna/after-10th.jpeg", "alt": "After completing matriculation", "caption": "After completing his matriculation (10th class) around 1980." }
+        ]
       },
       "02": {
         "number": "02",
@@ -76,13 +80,21 @@
         "number": "03",
         "title": "Finding His Path",
         "year": "1980s",
-        "content": "After completing his schooling, Balarama Krishna began learning electrical work under the guidance of his elder brother. What began as learning a trade gradually became his profession and his means of supporting his family. He went on to work as a private electrician, dedicating decades of his life to his profession. Through his skill, reliability and hard work, he became familiar to many families in and around Bhattiprolu. His profession connected him with people from different walks of life and became one of the ways through which he built lasting relationships within the community."
+        "content": "After completing his schooling, Balarama Krishna began learning electrical work under the guidance of his elder brother. What began as learning a trade gradually became his profession and his means of supporting his family. He went on to work as a private electrician, dedicating decades of his life to his profession. Through his skill, reliability and hard work, he became familiar to many families in and around Bhattiprolu. His profession connected him with people from different walks of life and became one of the ways through which he built lasting relationships within the community.",
+        "image": "/images/Nanna/starting-work.jpeg",
+        "imageAlt": "Starting his work journey",
+        "caption": "Beginning his journey as an electrician."
       },
       "04": {
         "number": "04",
         "title": "Family",
         "year": "7 February 1999",
-        "content": "On 7 February 1999, Balarama Krishna married Smt. Kanagala Krishna Durga Suneetha. Together, they built their family and were blessed with two sons. As a husband and father, he carried the responsibilities of his family with dedication. He was the family's primary breadwinner and worked consistently to provide for and support those he loved. His work was not simply a profession—it was one of the ways through which he expressed his responsibility toward his family."
+        "content": "On 7 February 1999, Balarama Krishna married Smt. Kanagala Krishna Durga Suneetha. Together, they built their family and were blessed with two sons. As a husband and father, he carried the responsibilities of his family with dedication. He was the family's primary breadwinner and worked consistently to provide for and support those he loved. His work was not simply a profession—it was one of the ways through which he expressed his responsibility toward his family",
+        "images": [
+          { "src": "/images/Nanna/vratam.jpeg", "alt": "Vratam ceremony", "caption": "The sacred vratam ceremony after marriage." },
+          { "src": "/images/Nanna/with-wife.jpeg", "alt": "With his wife", "caption": "With his beloved wife Smt. Kanagala Krishna Durga Suneetha." },
+          { "src": "/images/Nanna/couple-with-kids.jpeg", "alt": "Couple with their children", "caption": "Blessed with two sons - a complete family." }
+        ]
       },
       "05": {
         "number": "05",

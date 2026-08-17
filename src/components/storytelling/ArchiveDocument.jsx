@@ -11,6 +11,7 @@ export function ArchiveDocument({
   imageAlt,
   archiveNumber,
   className = "",
+  imageClassName = "",
   onImageClick,
 }) {
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -34,7 +35,7 @@ export function ArchiveDocument({
             <img
               src={imageSrc}
               alt={imageAlt || title}
-              className="w-full h-auto rounded-[1rem]"
+              className={`w-full h-auto rounded-[1rem] ${imageClassName}`.trim()}
               onClick={onImageClick}
               style={{ cursor: onImageClick ? "pointer" : "default" }}
             />
@@ -86,7 +87,7 @@ export function ArchiveDocument({
             transition={{ duration: 0.7, delay: 0.35 }}
             src={imageSrc}
             alt={imageAlt || title}
-            className="w-full h-auto rounded-[1rem] cursor-pointer hover:scale-[1.01] transition-transform duration-500"
+            className={`w-full h-auto rounded-[1rem] cursor-pointer hover:scale-[1.01] transition-transform duration-500 ${imageClassName}`.trim()}
             onClick={onImageClick}
           />
         ) : (

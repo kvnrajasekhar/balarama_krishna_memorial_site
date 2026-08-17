@@ -5,6 +5,8 @@ import { X } from "lucide-react";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ChapterTransition } from "../transitions/ChapterTransition";
 import { ArchiveDocument, DocumentLightbox, RevealText, NarrativeBlock } from "../storytelling";
+import CloudinaryVideo from "../common/CloudinaryVideo";
+import { videos } from "../../data/videos";
 
 export function Recognition() {
   const { t } = useTranslation();
@@ -12,9 +14,11 @@ export function Recognition() {
   const sections = ["jeevandan", "jeevandanList", "lvpei", "legacy"];
 
   const newspaperClippings = [
-    { title: "Eenadu", src: "/images/Nanna/eenadu-paper-cutting.jpeg" },
     { title: "Sakshi", src: "/images/Nanna/sakshi-paper-cutting.jpeg" },
     { title: "News App", src: "/images/Nanna/news-app-1.jpeg" },
+    { title: "News App 2", src: "/images/Nanna/news-app-2.jpg" },
+    { title: "News App 3", src: "/images/Nanna/news-app-3.jpg" },
+    { title: "Eenadu", src: "/images/Nanna/eenadu-paper-cutting.jpeg" },
   ];
 
   return (
@@ -88,11 +92,27 @@ export function Recognition() {
                 imageSrc={item.src}
                 imageAlt={item.title}
                 archiveNumber={`PRESS 0${index + 1}`}
+                className={item.title === "Eenadu" ? "lg:col-span-2" : ""}
+                imageClassName={item.title === "Eenadu" ? "lg:w-[110%]" : ""}
                 onImageClick={() => setSelectedImage(item)}
                 delay={index * 0.15}
               />
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-12"
+          >
+            <CloudinaryVideo
+              publicId={videos.chinnoduSpeech.publicId}
+              title={videos.chinnoduSpeech.title}
+              className="w-full rounded-lg shadow-lg"
+            />
+          </motion.div>
         </div>
 
         {/* Official Certificates - Archive Style */}

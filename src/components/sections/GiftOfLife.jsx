@@ -1,11 +1,16 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { X } from "lucide-react";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ChapterTransition } from "../transitions/ChapterTransition";
 import { TimeMarker, RevealText, NarrativeBlock } from "../storytelling";
+import CloudinaryVideo from "../common/CloudinaryVideo";
+import { videos } from "../../data/videos";
 
 export function GiftOfLife() {
   const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <section
@@ -68,7 +73,7 @@ export function GiftOfLife() {
         {/* 5 AUGUST 2025 - Decision */}
         <div className="mt-48">
           <TimeMarker date="5 AUGUST 2025" delay={0.2} />
-          
+
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
               {t("giftOfLife.sections.decision.title")}
@@ -98,7 +103,7 @@ export function GiftOfLife() {
         {/* 7 AUGUST 2025 - Final Morning */}
         <div className="mt-48">
           <TimeMarker date="7 AUGUST 2025" delay={0.2} />
-          
+
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
               {t("giftOfLife.sections.finalMorning.title")}
@@ -143,7 +148,7 @@ export function GiftOfLife() {
         {/* 3:33 PM - The Final Moment */}
         <div className="mt-48">
           <TimeMarker time="3:33 PM" label="The official time of death" delay={0.2} />
-          
+
           <div className="mt-16">
             <RevealText variant="mask" delay={0.4} className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.04em] text-[#24221f] mb-16">
               {t("giftOfLife.sections.finalMoment.title")}
@@ -168,6 +173,29 @@ export function GiftOfLife() {
               {t("giftOfLife.sections.tribute.content")}
             </RevealText>
           </NarrativeBlock>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-16 columns-1 gap-5 sm:columns-2 [column-fill:_balance]"
+          >
+            <div className="mb-5 break-inside-avoid">
+              <CloudinaryVideo
+                publicId={videos.gghSuperintendent.publicId}
+                title={videos.gghSuperintendent.title}
+                className="block h-auto w-full rounded-2xl border border-[#e7e0d7] bg-[#f7f4ee] shadow-[0_12px_35px_rgba(36,34,31,0.06)]"
+              />
+            </div>
+            <div className="mb-5 break-inside-avoid">
+              <CloudinaryVideo
+                publicId={videos.mamathaDoctor.publicId}
+                title={videos.mamathaDoctor.title}
+                className="block h-auto w-full rounded-2xl border border-[#e7e0d7] bg-[#f7f4ee] shadow-[0_12px_35px_rgba(36,34,31,0.06)]"
+              />
+            </div>
+          </motion.div>
         </div>
 
         {/* FELICITATION & HONOURING */}
@@ -181,6 +209,25 @@ export function GiftOfLife() {
               {t("giftOfLife.sections.felicitation.content")}
             </RevealText>
           </NarrativeBlock>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-12"
+          >
+            <button
+              onClick={() => setSelectedImage("/images/Nanna/felicitation-1.jpg")}
+              className="group block w-full overflow-hidden rounded-2xl border border-[#e7e0d7] bg-[#f7f4ee] text-left shadow-[0_12px_35px_rgba(36,34,31,0.06)]"
+            >
+              <img
+                src="/images/Nanna/felicitation-1.jpg"
+                alt="Felicitation ceremony"
+                className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              />
+            </button>
+          </motion.div>
         </div>
       </div>
 
@@ -190,6 +237,41 @@ export function GiftOfLife() {
         targetPath="/story/organ-donation"
         label={t("giftOfLife.continue")}
       />
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.button
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="absolute right-6 top-6 p-2 text-white/80 transition-colors hover:text-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <X size={32} />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              src={selectedImage}
+              alt="Gift of Life photograph"
+              className="max-h-[90vh] max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

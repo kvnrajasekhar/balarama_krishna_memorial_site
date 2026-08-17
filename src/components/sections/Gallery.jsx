@@ -7,17 +7,17 @@ import { X } from "lucide-react";
 import { RevealText } from "../storytelling";
 
 const galleryImages = [
-  { src: "/images/Nanna/nanna-1.png", category: "family" },
+  { src: "/images/Nanna/with-elder-son.png", category: "family" },
   { src: "/images/Nanna/3brothers.jpeg", category: "family" },
   { src: "/images/Nanna/nanna-2.jpg", category: "childhood" },
   { src: "/images/Nanna/nanna-3.JPG", category: "work" },
-  { src: "/images/Nanna/nanna-4.jpeg", category: "family" },
+  { src: "/images/Nanna/with-wife.jpeg", category: "family" },
   { src: "/images/Nanna/nanna-5.jpg", category: "everyday" },
-  { src: "/images/Nanna/nanna-6.jpeg", category: "work" },
+  { src: "/images/Nanna/starting-work.jpeg", category: "work" },
   { src: "/images/Nanna/nanna-7.jpg", category: "family" },
   { src: "/images/Nanna/nanna-9.jpeg", category: "everyday" },
-  { src: "/images/Nanna/nanna-e3.jpg", category: "memories" },
-  { src: "/images/Nanna/nanna-e4.jpg", category: "memories" },
+  { src: "/images/Nanna/with-wife-5.jpg", category: "memories" },
+  { src: "/images/Nanna/with-young-son.jpg", category: "memories" },
   { src: "/images/Nanna/nanna-image.jpg", category: "finalYears" },
   { src: "/images/Nanna/school-he-studied.jpeg", category: "childhood" },
   { src: "/images/Nanna/bhaskar-anna-marriage.jpeg", category: "family" },
@@ -26,6 +26,18 @@ const galleryImages = [
   { src: "/images/Nanna/bhaskar-anna-marriage3.jpeg", category: "family" },
   { src: "/images/Nanna/brothers.jpeg", category: "family" },
   { src: "/images/Nanna/family.jpeg", category: "family" },
+  { src: "/images/Nanna/family-1.jpeg", category: "family" },
+  { src: "/images/Nanna/family-2.jpeg", category: "family" },
+  { src: "/images/Nanna/in-law-and-wife.jpeg", category: "family" },
+  { src: "/images/Nanna/smoking.jpeg", category: "everyday" },
+  { src: "/images/Nanna/with-in-law.jpeg", category: "family" },
+  { src: "/images/Nanna/with-sons-1.jpeg", category: "family" },
+  { src: "/images/Nanna/with-wife-1.jpeg", category: "family" },
+  { src: "/images/Nanna/with-wife-2.jpeg", category: "family" },
+  { src: "/images/Nanna/with-wife-3.jpeg", category: "family" },
+  { src: "/images/Nanna/with-wife-4.jpeg", category: "family" },
+  { src: "/images/Nanna/work-1.jpeg", category: "work" },
+  { src: "/images/Nanna/young-age-1.jpg", category: "childhood" },
 ];
 
 /**

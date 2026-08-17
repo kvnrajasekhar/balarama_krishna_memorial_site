@@ -24,6 +24,47 @@ export const images = {
   },
 
   /**
+   * BIOGRAPHY SECTION
+   */
+  biography: {
+    parents: {
+      publicId: null,
+      localPath: "/images/Nanna/parents.jpeg",
+      alt: "Parents of Balarama Krishna",
+    },
+    school: {
+      publicId: null,
+      localPath: "/images/Nanna/school-he-studied.jpeg",
+      alt: "School where he studied",
+    },
+    after10th: {
+      publicId: null,
+      localPath: "/images/Nanna/after-10th.jpeg",
+      alt: "After completing matriculation",
+    },
+    startingWork: {
+      publicId: null,
+      localPath: "/images/Nanna/starting-work.jpeg",
+      alt: "Starting his work journey",
+    },
+    vratam: {
+      publicId: null,
+      localPath: "/images/Nanna/vratam.jpeg",
+      alt: "Vratam ceremony",
+    },
+    withWife: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife.jpeg",
+      alt: "With his wife",
+    },
+    coupleWithKids: {
+      publicId: null,
+      localPath: "/images/Nanna/couple-with-kids.jpeg",
+      alt: "Couple with their children",
+    },
+  },
+
+  /**
    * GALLERY SECTION
    */
   gallery: {
@@ -117,6 +158,102 @@ export const images = {
       alt: "Bhaskar Anna marriage",
       category: "family",
     },
+    family1: {
+      publicId: null,
+      localPath: "/images/Nanna/family-1.jpeg",
+      alt: "Family memory",
+      category: "family",
+    },
+    family2: {
+      publicId: null,
+      localPath: "/images/Nanna/family-2.jpeg",
+      alt: "Family memory",
+      category: "family",
+    },
+    inLawAndWife: {
+      publicId: null,
+      localPath: "/images/Nanna/in-law-and-wife.jpeg",
+      alt: "With in-law and wife",
+      category: "family",
+    },
+    smoking: {
+      publicId: null,
+      localPath: "/images/Nanna/smoking.jpeg",
+      alt: "Memory",
+      category: "everyday",
+    },
+    withElderSon: {
+      publicId: null,
+      localPath: "/images/Nanna/with-elder-son.png",
+      alt: "With elder son",
+      category: "family",
+    },
+    withInLaw: {
+      publicId: null,
+      localPath: "/images/Nanna/with-in-law.jpeg",
+      alt: "With in-law",
+      category: "family",
+    },
+    withSons1: {
+      publicId: null,
+      localPath: "/images/Nanna/with-sons-1.jpeg",
+      alt: "With sons",
+      category: "family",
+    },
+    withWife: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife.jpeg",
+      alt: "With wife",
+      category: "family",
+    },
+    withWife1: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife-1.jpeg",
+      alt: "With wife",
+      category: "family",
+    },
+    withWife2: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife-2.jpeg",
+      alt: "With wife",
+      category: "family",
+    },
+    withWife3: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife-3.jpeg",
+      alt: "With wife",
+      category: "family",
+    },
+    withWife4: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife-4.jpeg",
+      alt: "With wife",
+      category: "family",
+    },
+    withWife5: {
+      publicId: null,
+      localPath: "/images/Nanna/with-wife-5.jpg",
+      alt: "With wife",
+      category: "family",
+    },
+    withYoungSon: {
+      publicId: null,
+      localPath: "/images/Nanna/with-young-son.jpg",
+      alt: "With young son",
+      category: "family",
+    },
+    work1: {
+      publicId: null,
+      localPath: "/images/Nanna/work-1.jpeg",
+      alt: "Work memory",
+      category: "work",
+    },
+    youngAge1: {
+      publicId: null,
+      localPath: "/images/Nanna/young-age-1.jpg",
+      alt: "Young age memory",
+      category: "childhood",
+    },
   },
 
   /**
@@ -153,6 +290,43 @@ export const images = {
       publicId: null, // NEEDS VERIFICATION
       localPath: "/images/Nanna/news-app-1.jpeg",
       alt: "News app coverage",
+    },
+    newsApp2: {
+      publicId: null,
+      localPath: "/images/Nanna/news-app-2.jpg",
+      alt: "News app coverage",
+    },
+    newsApp3: {
+      publicId: null,
+      localPath: "/images/Nanna/news-app-3.jpg",
+      alt: "News app coverage",
+    },
+  },
+
+  /**
+   * FINAL JOURNEY SECTION
+   */
+  finalJourney: {
+    hisBicycle: {
+      publicId: null,
+      localPath: "/images/Nanna/his-bicycle.jpeg",
+      alt: "His bicycle",
+    },
+    accidentCar: {
+      publicId: null,
+      localPath: "/images/Nanna/accident-car.jpeg",
+      alt: "Accident car",
+    },
+  },
+
+  /**
+   * GIFT OF LIFE SECTION
+   */
+  giftOfLife: {
+    felicitation1: {
+      publicId: null,
+      localPath: "/images/Nanna/felicitation-1.jpg",
+      alt: "Felicitation ceremony",
     },
   },
 

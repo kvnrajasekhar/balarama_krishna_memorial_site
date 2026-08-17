@@ -1,11 +1,16 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { X } from "lucide-react";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ChapterTransition } from "../transitions/ChapterTransition";
 import { TimeMarker, LargeNumber, RevealText, NarrativeBlock } from "../storytelling";
+import CloudinaryVideo from "../common/CloudinaryVideo";
+import { videos } from "../../data/videos";
 
 export function FinalJourney() {
   const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <section id="final-journey" className="bg-[#171614] px-6 py-28 text-[#f7f4ee] sm:px-10 lg:px-16 lg:py-40">
@@ -53,6 +58,46 @@ export function FinalJourney() {
               {t("finalJourney.sections.accident.content")}
             </RevealText>
           </NarrativeBlock>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-12 columns-1 gap-5 sm:columns-2 [column-fill:_balance]"
+          >
+            <div className="mb-5 break-inside-avoid">
+              <button
+                onClick={() => setSelectedImage("/images/Nanna/his-bicycle.jpeg")}
+                className="group block w-full overflow-hidden rounded-2xl border border-[#2a2725] bg-[#1a1715] text-left shadow-[0_12px_35px_rgba(0,0,0,0.18)]"
+              >
+                <img
+                  src="/images/Nanna/his-bicycle.jpeg"
+                  alt="His bicycle"
+                  className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+              </button>
+            </div>
+            <div className="mb-5 break-inside-avoid">
+              <button
+                onClick={() => setSelectedImage("/images/Nanna/accident-car.jpeg")}
+                className="group block w-full overflow-hidden rounded-2xl border border-[#2a2725] bg-[#1a1715] text-left shadow-[0_12px_35px_rgba(0,0,0,0.18)]"
+              >
+                <img
+                  src="/images/Nanna/accident-car.jpeg"
+                  alt="Accident car"
+                  className="mx-auto block h-auto w-full max-w-[220px] transition-transform duration-700 ease-out group-hover:scale-[1.03] sm:max-w-[260px]"
+                />
+              </button>
+            </div>
+            <div className="mb-5 break-inside-avoid sm:col-span-2">
+              <CloudinaryVideo
+                publicId={videos.accidentSpot.publicId}
+                title={videos.accidentSpot.title}
+                className="block h-auto w-full rounded-2xl border border-[#2a2725] bg-[#1a1715] shadow-[0_12px_35px_rgba(0,0,0,0.18)]"
+              />
+            </div>
+          </motion.div>
         </div>
 
         <div className="mt-48 min-h-[40vh] flex items-center justify-center">
@@ -63,7 +108,7 @@ export function FinalJourney() {
             <br /><br />
             {t("finalJourney.headings.andThen")}
             <br /><br />
-            <span className="text-[#f7f4ee]">{t("finalJourney.headings.everythingChanged")}</span>
+            {t("finalJourney.headings.silence")}
           </RevealText>
         </div>
 
@@ -152,6 +197,41 @@ export function FinalJourney() {
         targetPath="/story/gift-of-life"
         label={t("finalJourney.continue")}
       />
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.button
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="absolute right-6 top-6 p-2 text-white/80 transition-colors hover:text-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <X size={32} />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              src={selectedImage}
+              alt="Final Journey photograph"
+              className="max-h-[90vh] max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
