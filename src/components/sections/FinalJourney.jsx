@@ -108,7 +108,7 @@ export function FinalJourney() {
             <br /><br />
             {t("finalJourney.headings.andThen")}
             <br /><br />
-            {t("finalJourney.headings.silence")}
+            {t("finalJourney.headings.everythingChanged")}
           </RevealText>
         </div>
 
