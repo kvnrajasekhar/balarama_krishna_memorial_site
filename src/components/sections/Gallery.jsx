@@ -36,7 +36,7 @@ const galleryImages = [
   { src: "/images/Nanna/with-wife-2.jpeg", category: "family" },
   { src: "/images/Nanna/with-wife-3.jpeg", category: "family" },
   { src: "/images/Nanna/with-wife-4.jpeg", category: "family" },
-  { src: "/images/Nanna/work-1.jpeg", category: "work" },
+  { src: "/images/Nanna/with-wife-6.jpeg", category: "family" },
   { src: "/images/Nanna/young-age-1.jpg", category: "childhood" },
 ];
 
