@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
-import { Hero } from "../components/hero/Hero";
+import HeroSection from "../components/hero/HeroSection";
+import { WelcomeStory } from "./WelcomeStory";
+import { ChapterTransition } from "../components/transitions/ChapterTransition";
 
 export function Landing() {
+   const t = useTranslation().t;
   const navigate = useNavigate();
   const [showTransition, setShowTransition] = useState(false);
 
@@ -17,7 +21,7 @@ export function Landing() {
       }
 
       const scrollPercent = window.scrollY / maxScroll;
-      if (scrollPercent > 0.85 && !showTransition) {
+      if (scrollPercent > 0.96 && !showTransition) {
         setShowTransition(true);
         setTimeout(() => {
           navigate("/welcome");
@@ -33,8 +37,13 @@ export function Landing() {
     <main className="min-h-screen bg-[#f7f4ee] text-[#24221f]">
       <Header />
 
-      <Hero />
-
+      <HeroSection />
+      <ChapterTransition
+        nextChapter={t("welcome.kicker")}
+        nextChapterId="welcome"
+        targetPath="/welcome"
+        label={t("welcome.kicker")}
+      />
       <AnimatePresence>
         {showTransition && (
           <motion.div

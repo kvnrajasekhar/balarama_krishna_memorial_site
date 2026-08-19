@@ -31,9 +31,11 @@
     "kicker": "A life remembered",
     "name": "Kanagala Balarama Krishna",
     "birthDate": "24 DECEMBER 1965",
-    "tagline": "A life of truth, family, hard work, and human relationships.",
+    "tagline": "A life of selflessness, family, hard work, and human relationships.",
     "beginStory": "Begin his story",
-    "scrollCue": "Explore his story"
+    "scrollCue": "Explore his story",
+    "storyLabel": "His Story",
+    "scrollToExplore": "Scroll to Explore"
   },
   "languageSelection": {
     "title": "Welcome",

@@ -1,0 +1,300 @@
+/**
+ * Hero Section — supporting styles
+ * ---------------------------------
+ * Scope everything under `.hero-section` so nothing leaks into the rest
+ * of the app. Drop this file next to HeroSection.jsx and `import "./hero.css"`.
+ *
+ * FONTS: this design assumes an editorial serif for the name (Fraunces) and
+ * a clean grotesk for everything else (Inter). If your project already has
+ * a type system in `design_plan.md` / tailwind.config, swap the font-family
+ * values below for your existing tokens instead of adding a new webfont.
+ * Otherwise, add to index.html <head>:
+ *
+ * <link rel="preconnect" href="https://fonts.googleapis.com">
+ * <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ * <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+ */
+
+.hero-section {
+    --hero-ivory: #111010;
+    --hero-ivory-deep: #221f18;
+    --hero-ink: #f7f1e5;
+    --hero-ink-soft: #d7cdbc;
+    --hero-bronze: #d8aa5e;
+    --hero-bronze-soft: #e5c887;
+    --hero-light-core: #f4dcae;
+    --hero-line: rgba(247, 241, 229, 0.24);
+
+    background: linear-gradient(180deg, var(--hero-ivory) 0%, var(--hero-ivory) 78%, var(--hero-ivory-deep) 100%);
+    color: var(--hero-ink);
+}
+
+/* Dark warm vignette gathering toward the bottom-right, behind the
+   portrait — this is what gives the reference its cinematic falloff
+   instead of a flat cream backdrop everywhere. Sits above the base
+   gradient, below the content. */
+.hero-vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(216, 170, 94, 0.1) 0%, rgba(216, 170, 94, 0) 62%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.22) 100%);
+}
+
+@media (min-width: 1024px) {
+    .hero-vignette {
+        background: radial-gradient(ellipse 65% 60% at 82% 92%, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 62%),
+            linear-gradient(180deg, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.3) 100%);
+    }
+}
+
+.hero-font-display {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-optical-sizing: auto;
+}
+
+.hero-font-sans {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Fine film-grain overlay. A single static SVG noise pattern — cheap to
+   paint, no filter/blur cost, ~35 lines of markup baked into a data URI. */
+.hero-grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 140px 140px;
+}
+
+/* The narrative "thread" — a hairline that strings intro → name → birth
+   info together. Encodes "this is one continuous life," not decoration. */
+.hero-thread {
+    position: relative;
+}
+
+.hero-thread::before {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    bottom: 0.35em;
+    width: 1px;
+    background: linear-gradient(180deg, var(--hero-bronze) 0%, var(--hero-line) 85%);
+    transform-origin: top;
+}
+
+/* The thread reads correctly only against left-aligned text */
+@media (min-width: 1024px) {
+    .hero-thread::before {
+        display: block;
+    }
+}
+
+/* Atmospheric light behind the portrait — very slow breathing */
+.hero-light {
+    background: radial-gradient(closest-side,
+            #fff4d6 0%,
+            rgba(244, 204, 131, 0.52) 42%,
+            rgba(196, 145, 63, 0) 72%);
+    filter: blur(2px);
+    animation: hero-breathe 9s ease-in-out infinite;
+}
+
+@keyframes hero-breathe {
+
+    0%,
+    100% {
+        opacity: 0.32;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+}
+
+/* Soft radiating rays behind the light core — reads as light source, not
+   a starburst. A conic gradient masked to a radial falloff, single element. */
+.hero-rays {
+    background: conic-gradient(from 0deg,
+            rgba(176, 126, 44, 0.34) 0deg,
+            rgba(176, 126, 44, 0) 14deg,
+            rgba(214, 163, 74, 0.3) 28deg,
+            rgba(176, 126, 44, 0) 42deg,
+            rgba(214, 163, 74, 0.32) 58deg,
+            rgba(176, 126, 44, 0) 74deg,
+            rgba(214, 163, 74, 0.24) 92deg,
+            rgba(176, 126, 44, 0) 108deg,
+            rgba(214, 163, 74, 0.34) 130deg,
+            rgba(176, 126, 44, 0) 148deg,
+            rgba(214, 163, 74, 0.3) 168deg,
+            rgba(176, 126, 44, 0) 360deg);
+    mask-image: radial-gradient(closest-side, black 0%, black 30%, transparent 78%);
+    -webkit-mask-image: radial-gradient(closest-side, black 0%, black 30%, transparent 78%);
+    animation: hero-rays-turn 60s linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes hero-rays-turn {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* The visible sepia "echo" — same untouched PNG, offset up-right and
+   enlarged, tinted warm via filter only (no facial retouching). This is
+   the reference's signature depth device. */
+.hero-echo {
+    top: 0;
+    right: 0;
+    opacity: 0.22;
+    filter: sepia(0.55) saturate(1.1) brightness(0.9) blur(1.5px);
+    transform: translate(29%, -12%) scale(1.32);
+    transform-origin: top right;
+    mix-blend-mode: multiply;
+}
+
+/* Bokeh — a few large, softly blurred warm circles drifting very slowly */
+.hero-bokeh {
+    background: radial-gradient(circle, rgba(244, 220, 174, 0.55) 0%, rgba(244, 220, 174, 0) 70%);
+    filter: blur(3px);
+    animation: hero-bokeh-drift 14s ease-in-out infinite;
+}
+
+@keyframes hero-bokeh-drift {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translate3d(-6px, -14px, 0);
+    }
+}
+
+/* Bottom vignette so the free-standing portrait's base resolves into the
+   page rather than cutting off hard */
+.hero-portrait-fade {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 32%;
+    background: linear-gradient(180deg, rgba(17, 16, 16, 0) 0%, var(--hero-ivory) 92%);
+    pointer-events: none;
+}
+
+/* Dust motes — a handful of DOM nodes, transform/opacity only, GPU-friendly */
+.hero-mote {
+    position: absolute;
+    border-radius: 9999px;
+    background: var(--hero-bronze-soft);
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation: hero-drift linear infinite;
+}
+
+@keyframes hero-drift {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 0.5;
+    }
+
+    88% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate3d(var(--drift-x, 6px), var(--drift-y, -60px), 0);
+        opacity: 0;
+    }
+}
+
+/* Small diamond divider under the name */
+.hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.hero-divider::before,
+.hero-divider::after {
+    content: "";
+    height: 1px;
+    width: 28px;
+    background: var(--hero-line);
+}
+
+.hero-divider-mark {
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--hero-bronze);
+    transform: rotate(45deg);
+    flex: none;
+}
+
+/* Scroll cue — short line, circular ring with a bobbing arrow, label below */
+.hero-scroll-line {
+    width: 1px;
+    height: 22px;
+    background: var(--hero-line);
+}
+
+.hero-scroll-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    border: 1px solid var(--hero-bronze-soft);
+}
+
+.hero-scroll-arrow {
+    animation: hero-arrow-bob 2.2s ease-in-out infinite;
+}
+
+@keyframes hero-arrow-bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-light,
+    .hero-rays,
+    .hero-bokeh,
+    .hero-mote,
+    .hero-scroll-arrow {
+        animation: none !important;
+    }
+
+    .hero-light {
+        opacity: 0.4;
+    }
+
+    .hero-rays {
+        opacity: 0.4;
+    }
+}
