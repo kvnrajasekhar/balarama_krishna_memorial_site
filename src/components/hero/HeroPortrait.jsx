@@ -44,22 +44,23 @@ export function HeroPortrait({ src, alt, showEcho = true }) {
       {/* Radiating warm light behind the figure */}
       <div
         aria-hidden="true"
-        className="hero-rays absolute left-[58%] top-[27%] h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
+        className="hero-rays absolute left-1/2 top-[40%] h-[95%] w-[95%] -translate-x-1/2 -translate-y-1/2"
       />
       <div
         aria-hidden="true"
-        className="hero-light absolute left-[58%] top-[27%] h-[72%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        className="hero-light absolute left-1/2 top-[40%] h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full"
       />
 
       {/* Large sepia "echo" of the same photograph, offset up and to the
           right — this is the visible depth layer, not a faint duplicate.
-          Same untouched PNG, no facial alteration: only CSS filter/opacity. */}
+          Same untouched PNG, no facial alteration: only CSS filter/opacity.
+          hero-portrait-mask dissolves its own bottom edge too. */}
       {showEcho && imageReady && (
         <img
           aria-hidden="true"
           src={src}
           alt=""
-          className="hero-echo pointer-events-none absolute h-full w-full object-contain object-bottom"
+          className="hero-echo hero-portrait-mask pointer-events-none absolute h-full w-full object-contain object-bottom"
         />
       )}
 
@@ -113,7 +114,7 @@ export function HeroPortrait({ src, alt, showEcho = true }) {
             alt={alt}
             fetchpriority="high"
             decoding="async"
-            className="h-full w-full object-contain object-bottom drop-shadow-[0_30px_40px_rgba(34,29,22,0.22)]"
+            className="hero-portrait-mask h-full w-full object-contain object-bottom drop-shadow-[0_30px_40px_rgba(34,29,22,0.22)]"
             onError={() => setImageReady(false)}
           />
         ) : (
@@ -129,9 +130,6 @@ export function HeroPortrait({ src, alt, showEcho = true }) {
           </div>
         )}
       </motion.div>
-
-      {/* Bottom fade so the free-standing figure resolves into the page */}
-      <div aria-hidden="true" className="hero-portrait-fade" />
     </div>
   );
 }

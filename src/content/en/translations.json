@@ -28,14 +28,16 @@
     "closingNext": "Returning to the beginning"
   },
   "hero": {
-    "kicker": "A life remembered",
+    "kicker": "A life remembered. A Legacy That Lives On.",
     "name": "Kanagala Balarama Krishna",
     "birthDate": "24 DECEMBER 1965",
+    "birthPlace": "Bhattiprolu, Guntur",
     "tagline": "A life of selflessness, family, hard work, and human relationships.",
     "beginStory": "Begin his story",
     "scrollCue": "Explore his story",
     "storyLabel": "His Story",
-    "scrollToExplore": "Scroll to Explore"
+    "scrollToExplore": "Scroll to Explore",
+    "portraitAlt": "Portrait of Kanagala Balarama Krishna"
   },
   "languageSelection": {
     "title": "Welcome",

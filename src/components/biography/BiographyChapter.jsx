@@ -1,8 +1,11 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { X } from "lucide-react";
 
-export function BiographyChapter({ chapterKey, index, onImageClick }) {
+export function BiographyChapter({ chapterKey, index }) {
   const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState(null);
   const chapter = t(`biography.chapters.${chapterKey}`, { returnObjects: true });
 
   const compactPortraitClasses = "mx-auto block h-auto w-full max-w-[220px] sm:max-w-[240px] md:max-w-[280px]";
@@ -45,7 +48,7 @@ export function BiographyChapter({ chapterKey, index, onImageClick }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              onClick={() => onImageClick(chapter.image)}
+              onClick={() => setSelectedImage(chapter.image)}
               className="group block w-full overflow-hidden rounded-2xl border border-[#e7e0d7] bg-[#f7f4ee] shadow-[0_12px_35px_rgba(36,34,31,0.06)] text-left"
             >
               <img
@@ -72,7 +75,7 @@ export function BiographyChapter({ chapterKey, index, onImageClick }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 + idx * 0.1 }}
-                  onClick={() => onImageClick(img.src)}
+                  onClick={() => setSelectedImage(img.src)}
                   className="group block w-full overflow-hidden rounded-2xl border border-[#e7e0d7] bg-[#f7f4ee] shadow-[0_12px_35px_rgba(36,34,31,0.06)] text-left"
                 >
                   <img
@@ -91,6 +94,41 @@ export function BiographyChapter({ chapterKey, index, onImageClick }) {
           </div>
         )}
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.button
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="absolute right-6 top-6 p-2 text-white/80 transition-colors hover:text-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <X size={32} />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              src={selectedImage}
+              alt="Biography photograph"
+              className="max-h-[90vh] max-w-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
