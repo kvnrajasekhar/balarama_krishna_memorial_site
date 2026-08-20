@@ -4,12 +4,13 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
+import { PreFooter } from "../components/layout/PreFooter";
 import HeroSection from "../components/hero/HeroSection";
 import { WelcomeStory } from "./WelcomeStory";
 import { ChapterTransition } from "../components/transitions/ChapterTransition";
 
 export function Landing() {
-   const t = useTranslation().t;
+  const t = useTranslation().t;
   const navigate = useNavigate();
   const [showTransition, setShowTransition] = useState(false);
 
@@ -38,6 +39,7 @@ export function Landing() {
       <Header />
 
       <HeroSection />
+      <PreFooter />
       <ChapterTransition
         nextChapter={t("welcome.kicker")}
         nextChapterId="welcome"

@@ -39,6 +39,16 @@
     "scrollToExplore": "Scroll to Explore",
     "portraitAlt": "Portrait of Kanagala Balarama Krishna"
   },
+  "preFooter": {
+  "quote": [
+    "A life lived with love never truly ends;",
+    "it continues in the hearts he touched,",
+    "the memories he left,",
+    "and the lives he helped begin again."
+  ],
+  "attribution": "In Loving Memory of ",
+  "name":"Kanagala Balarama Krishna"
+},
   "languageSelection": {
     "title": "Welcome",
     "message": "Please select your preferred language to explore the memorial of Kanagala Balarama Krishna",
