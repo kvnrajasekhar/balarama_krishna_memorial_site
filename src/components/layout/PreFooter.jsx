@@ -28,13 +28,17 @@ export function PreFooter() {
         animate={isInView ? (prefersReducedMotion ? {} : { opacity: 1, scale: 1 }) : {}}
         transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url("/images/footer.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
+      >
+        <picture>
+          <source media="(min-width: 768px)" srcSet="/images/footer.png" />
+          <img
+            src="/images/footer-mobile.png"
+            alt=""
+            className="w-full h-full object-cover object-center overflow-hidden"
+            loading="lazy"
+          />
+        </picture>
+      </motion.div>
 
       {/* Subtle warm light sweep */}
       {isInView && !prefersReducedMotion && (
