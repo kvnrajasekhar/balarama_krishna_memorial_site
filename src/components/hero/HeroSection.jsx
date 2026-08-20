@@ -67,7 +67,7 @@ export default function HeroSection() {
       ref={sectionRef}
       id="hero"
       aria-label={t("hero.name")}
-      className="hero-section relative flex min-h-screen w-full flex-col overflow-hidden"
+      className="hero-section relative flex min-h-screen w-full flex-col overflow-x-hidden overflow-hidden"
     >
       {/* Responsive pre-composed background — one request, browser picks
           the matching source. fetchpriority="high" since this is almost
@@ -88,9 +88,11 @@ export default function HeroSection() {
       {/* ---------- Text column ---------- */}
       <motion.div
         style={prefersReducedMotion ? undefined : { opacity: textOpacity, y: textY }}
-        className="hero-font-sans relative z-10 mx-auto flex w-full max-w-[1400px] flex-1 flex-col justify-end px-6 pb-14 pt-24 sm:px-10 sm:pb-16 md:justify-center md:pb-0 md:pt-16 lg:px-16"
+        className="hero-font-sans relative z-10 mx-auto flex w-full max-w-[1400px] flex-1 flex-col px-6 pt-16 sm:px-10 md:justify-center md:pb-0 md:pt-16 lg:px-16"
       >
-        <div className="mx-auto max-w-md text-center md:mx-0 md:max-w-lg md:text-left">
+        {/* Mobile: Protected portrait zone with text in bottom area */}
+        <div className="flex-1 flex flex-col justify-end pb-16 md:justify-center md:pb-0">
+          <div className="mx-auto max-w-md text-center md:mx-0 md:max-w-lg md:text-left">
           <motion.p
             initial={prefersReducedMotion ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +111,7 @@ export default function HeroSection() {
               fontWeight: 500,
               lineHeight: 1.04,
               letterSpacing: "-0.005em",
-              fontSize: "clamp(2.3rem, 3.6vw + 1.1rem, 4.75rem)",
+              fontSize: "clamp(1.8rem, 4vw + 1rem, 4.75rem)",
             }}
           >
             {t("hero.name")}
@@ -128,7 +130,7 @@ export default function HeroSection() {
             initial={prefersReducedMotion ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...easedEntrance, delay: 0.42 }}
-            className="mt-5 text-sm leading-relaxed text-[var(--hero-text-soft)] sm:text-base"
+            className="mt-4 text-xs leading-relaxed text-[var(--hero-text-soft)] sm:text-sm md:text-base"
           >
             {t("hero.tagline")}
           </motion.p>
@@ -137,13 +139,13 @@ export default function HeroSection() {
             initial={prefersReducedMotion ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...easedEntrance, delay: 0.52 }}
-            className="mt-6 flex items-center justify-center gap-3 text-xs tracking-[0.06em] text-[var(--hero-text-soft)] md:justify-start"
+            className="mt-4 flex items-center justify-center gap-2 text-[10px] tracking-[0.06em] text-[var(--hero-text-soft)] sm:gap-3 sm:text-xs md:justify-start"
           >
-            <CalendarIcon aria-hidden="true" className="h-5 w-5 shrink-0 text-[var(--hero-accent)]" />
-            <span aria-hidden="true" className="h-8 w-px bg-[var(--hero-line)]" />
+            <CalendarIcon aria-hidden="true" className="h-4 w-4 shrink-0 text-[var(--hero-accent)] sm:h-5 sm:w-5" />
+            <span aria-hidden="true" className="h-6 w-px bg-[var(--hero-line)] sm:h-8" />
             <span>
-              <p className="hero-font-display text-sm text-[var(--hero-text)]">{t("hero.birthDate")}</p>
-              <p className="mt-1 uppercase tracking-[0.18em]">{t("hero.birthPlace")}</p>
+              <p className="hero-font-display text-xs text-[var(--hero-text)] sm:text-sm">{t("hero.birthDate")}</p>
+              <p className="mt-0.5 uppercase tracking-[0.18em] sm:mt-1">{t("hero.birthPlace")}</p>
             </span>
           </motion.div>
 
@@ -151,25 +153,26 @@ export default function HeroSection() {
             initial={prefersReducedMotion ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...easedEntrance, delay: 0.64 }}
-            className="mt-8 flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-start"
+            className="mt-6 flex flex-col items-center gap-4 md:mt-8 md:flex-row md:items-center md:justify-start md:gap-6"
           >
-            <a href="/welcome" className="hero-cta hero-font-sans text-sm">
+            <a href="/welcome" className="hero-cta hero-font-sans text-xs px-5 py-2.5 sm:text-sm sm:px-6 sm:py-3">
               {t("hero.beginStory")}
-              <ArrowRightIcon aria-hidden="true" className="h-4 w-4" />
+              <ArrowRightIcon aria-hidden="true" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </a>
 
             {/* Compact scroll cue, kept light so it doesn't compete with the CTA */}
             <a
               href="#life-journey"
-              className="hero-font-sans flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[var(--hero-text-soft)]"
+              className="hero-font-sans flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[var(--hero-text-soft)] sm:text-[11px]"
             >
               <span>{t("hero.storyLabel")}</span>
               <span className="hero-scroll-ring" aria-hidden="true">
-                <ArrowDownIcon className="hero-scroll-arrow h-3.5 w-3.5 text-[var(--hero-accent)]" />
+                <ArrowDownIcon className="hero-scroll-arrow h-3 w-3 text-[var(--hero-accent)] sm:h-3.5 sm:w-3.5" />
               </span>
               <span className="sr-only">{t("hero.scrollToExplore")}</span>
             </a>
           </motion.div>
+        </div>
         </div>
       </motion.div>
     </section>
