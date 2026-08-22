@@ -144,7 +144,7 @@ export function Recognition() {
               onImageClick={() =>
                 setSelectedImage({
                   title: "LVPEI Certificate",
-                  src: "../../public/images/Nanna/lvpei-certificate.jpeg",
+                  src: "/images/Nanna/lvpei-certificate.jpeg",
                 })
               }
             />

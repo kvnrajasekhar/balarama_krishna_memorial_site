@@ -21,15 +21,25 @@ const getSavedLanguage = () => {
   return "en";
 };
 
+const savedLanguage = getSavedLanguage();
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: getSavedLanguage(),
+    lng: savedLanguage,
     fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },
   });
+
+if (typeof document !== "undefined") {
+  document.documentElement.lang = savedLanguage;
+}
+
+i18n.on("languageChanged", (language) => {
+  document.documentElement.lang = language;
+});
 
 export default i18n;

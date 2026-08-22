@@ -45,7 +45,7 @@ export function Closing() {
 
         {/* Intimate Letter - Family Message */}
         <IntimateLetter 
-          signature="With love, His family"
+          signature={t("closing.signature")}
           className="px-8 sm:px-12 lg:px-16"
         >
           {t("closing.message")}
